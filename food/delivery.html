@@ -2,14 +2,23 @@
       type="image/png" 
       href="food logo.png">
 <ul>
+  <li><a href="https://wvcs.github.io/index-arianhp/index.html">CEO's Page</a></li>
 <li><a href="home.html">Home</a></li>
       <li><a href="menu.html">Menu</a></li>
-      <li><a href="delivery.html">Order Online</a></li>
+      <li><a href="Delivery.html">Order Online</a></li>
 </ul>
 
-
+<div class="wrapper">
+  <div class="box header">Order Online and Dodge the Line!</div>
+  <div class="box sidebar">If you place an order on the phone we will have your food ready when you come.</div>
+  <div class="box sidebar2">You can also request to get it delivered for a tiny shipping cost.</div>
+  <div class="box content">No Wait!
+    <br />  Order online now and get curbside pickup at NO EXTRA COST!</div>
+  <div class="box footer">Phone Number:000-000-0000</div>
+</div>
 
 <style>
+      
   body {
   background-color: #C4A484;
 }
@@ -51,4 +60,88 @@ div.bottomlinks:hover {
   font-size: 250%;
     color: white;
 }
-  </style>
+body {
+  margin: 40px;
+  background-color:#C4A484;
+}
+
+.sidebar {
+    grid-area: sidebar;
+  }
+
+  .sidebar2 {
+    grid-area: sidebar2;
+  }
+
+  .content {
+    grid-area: content;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .wrapper {
+    background-color: #FF0202;
+    color: #444;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+     "header"
+     "sidebar"
+     "content"
+     "sidebar2"
+     "footer"
+  }
+
+  @media only screen and (min-width: 500px)  {
+  .wrapper {
+
+    grid-template-columns: 20% auto;
+    grid-template-areas:
+    "header   header"
+    "sidebar  content"
+    "sidebar2 sidebar2"
+    "footer   footer";
+  }
+  }
+
+  @media only screen and (min-width: 600px)   {
+    .wrapper {
+      grid-gap: 20px;
+      grid-template-columns: 120px auto 120px;
+      grid-template-areas:
+      "header  header  header"
+      "sidebar content sidebar2"
+      "footer  footer  footer";
+      max-width: 600px;
+    }
+  }
+
+.box {
+  background-color: #ffffa1;
+  color: 
+#FF0202
+;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 150%; 
+}
+
+.header,
+.footer {
+  background-color: #ffffa1;
+}
+
+.sidebar2 {
+  background-color: #ffffa1;
+  color: #FF0202;
+}
+</style>
