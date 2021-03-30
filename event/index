@@ -1,7 +1,11 @@
 <html>
+<link rel="icon" 
+      type="image/png" 
+      href="vaccine.png">
+<ul>
 <li><a href="https://wvcs.github.io/index-arianhp/index.html">CEO's Page</a></li>
 <li><a href="event/index.html">Home</a></li>
-
+</ul>
 
 
 
