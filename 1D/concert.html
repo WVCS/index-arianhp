@@ -1,0 +1,248 @@
+  <body data-new-gr-c-s-check-loaded="14.1007.0" data-gr-ext-installed=""><ul class="nav">
+  <li class="nav"><a href="home.html">Home</a></li>
+  
+   <li class="nav"><a href="social.html">Socials</a></li> 
+      <li class="nav"><a href="home.html">Concert & Tickets</a></li>
+  </ul>
+  <center>
+    <br>
+    <br>
+    <h1> Concert </h1>
+ 
+    <center>
+   <head>
+      <meta charset="UTF-8">
+      <title>Slideshow</title>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <div id="slideshow-example" data-component="slideshow">
+        <div role="list">
+          <div class="slide">
+            <img src="https://luck.s3.amazonaws.com/venue/48.gif" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://cdn10.bostonmagazine.com/wp-content/uploads/2014/08/1d.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://www.orlandosentinel.com/resizer/dozLNlASmLwczUhHucrLAgZUrrU=/fit-in/800x533/smart/filters:fill(black)/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/UCMVJ5YXDZCAPIRYMS4W2NRUTY.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    <script src="slideshow.js"></script>
+    </body>
+      <br>
+       <br>
+       <br>
+      <hr>
+      
+ <center>
+      <h2 id="schedule"> Albums </h2>
+    <table>
+   <tbody><tr>
+    <th>Stadium</th>
+    <th>Seating</th>
+     <th>Prices</th>
+     
+  </tr>
+  <tr>
+    <td> <img src="https://mcdn.gamestub.com/x450/sdccu-stadium-the-rolling-stones-39570.jpg" </td>
+    <td> <img src="seating.png"</td>
+    <td> <img src="prices.png" </td>
+   
+  </tr>
+  <tr>
+    
+    
+   
+
+
+   </center>
+
+  
+<style>
+  
+body {
+  background-color: #FFDAB9;
+  margin: 40px;
+}
+tr:hover {
+  background-color: #A6C2DB;
+}
+ul.nav {
+  list-style-type: none;
+  width: 100%;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  background-color: #A6C2DB;
+  padding: 10px;
+  margin: 0;
+}
+
+li.nav {
+  display: inline;
+  padding: 20x;
+  margin: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 120%;
+}
+
+li.nav a:hover {
+  background-color: #111;
+  letter-spacing: 2px;
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: 	#000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+ [data-component="slideshow"] .slide {
+    display: none;
+  }
+
+  [data-component="slideshow"] .slide.active {
+    display: block;
+  }
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th {
+  height: 70px;
+}
+
+td {
+  padding: 6px;
+  text-align: center;
+}
+
+tr:hover {
+  background-color: #A6C2DB;
+}
+      </style>
+      <js>
+         var slideshows = document.querySelectorAll('[data-component="slideshow"]');
+  
+  // Apply to all slideshows that you define with the markup wrote
+  slideshows.forEach(initSlideShow);
+
+  function initSlideShow(slideshow) {
+
+    var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`); // Get an array of slides
+
+    var index = 0, time = 5000;
+    slides[index].classList.add('active');  
+    
+    setInterval( () => {
+      slides[index].classList.remove('active');
+      
+      //Go over each slide incrementing the index
+      index++;
+      
+      // If you go over all slides, restart the index to show the first slide and start again
+      if (index === slides.length) index = 0; 
+      
+      slides[index].classList.add('active');
+
+    }, time);
+  }
+      </js>
